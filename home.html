@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- title -->
+    <title>Home Page</title>
+    <!-- Icon -->
+    <link rel="icon" href="images/icon3.png">
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+
+  </head>
+  
+  <body>
+    <nav>
+      <div class="bg-white p-3">
+        <div
+          class="container d-flex justify-content-between align-items-center"
+        >
+          <div><h1>Perfect</h1></div>
+          <div>
+            <button id="logOutBtn" onclick="logOut()" class="btn btn-outline-danger">
+              LogOut
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <section id="Home" class="d-flex justify-content-center align-items-center">
+        <div>
+          <h2 id="welcomeMessage" class="bg-black bg-opacity-50 p-3 text-info"></h2>
+        </div>
+    </section>
+    <script src="js/index.js"></script>
+  </body>
+</html>
