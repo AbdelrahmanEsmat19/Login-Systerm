@@ -69,6 +69,13 @@ function signInValues() {
         passwordLogin: passwordLogin.value,
     };
 
+    if (emailLogin.value === "" || passwordLogin.value === "") {
+        document.getElementById("loginErrorInvalid").classList.add("d-none");
+
+        document.getElementById("loginErrorEmpty").classList.remove("d-none");
+        return;
+    }
+
     const storedData = JSON.parse(localStorage.getItem("inputs"));
     let isValid = false;
 
@@ -83,7 +90,9 @@ function signInValues() {
         passwordLogin.value = "";
         window.location.href = "home.html";
     } else {
-        loginError.classList.remove("d-none");
+        document.getElementById("loginErrorInvalid").classList.remove("d-none");
+        document.getElementById("loginErrorEmpty").classList.add("d-none");
+
     }
 }
 
